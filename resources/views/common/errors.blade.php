@@ -1,0 +1,23 @@
+<?php
+/**
+ * Created by PhpStorm.
+ * User: thyelee
+ * Date: 31/03/2016
+ * Time: 3:19
+ */
+?>
+
+@if (count($errors) > 0)
+        <!-- Form Error List -->
+<div class="alert alert-danger">
+    <strong>Whoops! Something went wrong!</strong>
+
+    <br><br>
+
+    <ul>
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
